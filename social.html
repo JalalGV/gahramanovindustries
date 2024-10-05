@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="GI.png" type="image/png">
+    <title>Social Accounts - Gahramanov Industries</title>
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap');
+
+        /* General styling */
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            /* Dark background */
+            color: #e0e0e0;
+            /* Light gray text */
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #000;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            z-index: 999;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            padding: 8px 15px;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #b79f5b;
+            /* Muted gold on hover */
+        }
+
+        /* Hamburger menu for mobile */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #e0e0e0;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Header */
+        header {
+            background-color: #000;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        /* Social Accounts Section */
+        .social-accounts {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #2a2a2a;
+            /* Darker section background */
+        }
+
+        .social-accounts h2 {
+            font-family: 'Playfair Display', serif;
+            color: #b79f5b;
+            /* Muted gold */
+            margin-bottom: 40px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .social-icon {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+            text-align: center;
+            width: 120px;
+            transition: transform 0.3s;
+        }
+
+        .social-icon img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #aaa;
+        }
+
+        /* About Section */
+        .about {
+            padding: 50px 20px;
+            background-color: #1e1e1e;
+            /* Dark background */
+            color: #e0e0e0;
+            text-align: center;
+            margin: 60px 0;
+            /* Margin to separate from the social section */
+        }
+
+        .about h2 {
+            font-family: 'Playfair Display', serif;
+            color: #b79f5b;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #b79f5b;
+            /* Muted gold */
+            padding: 30px;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
+        }
+
+        footer a {
+            color: #b79f5b;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Hamburger Menu */
+        @media only screen and (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                background-color: #000;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 15px 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Explore Projects!</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="social.html">Social</a></li>
+            <li><a href="mailto:gahramanovcalal@gmail.com">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Social Accounts Section -->
+    <section class="social-accounts">
+        <h2>Follow Us on Social Media</h2>
+        <div class="social-icons">
+            <div class="social-icon">
+                <a href="https://www.facebook.com/jalal.gahramanov">
+                    <img src="f.png" alt="Facebook">
+                </a>
+                <p>Facebook</p>
+            </div>
+            <div class="social-icon">
+                <a href="https://www.instagram.com/_jalal.gahramanov_/">
+                    <img src="i.png" alt="Instagram 1">
+                </a>
+                <p>Mr. Jalal's Instagram</p>
+            </div>
+            <div class="social-icon">
+                <a href="https://www.instagram.com/the.gahramanov.industries/">
+                    <img src="i.png" alt="Instagram 2">
+                </a>
+                <p>Company's Instagram</p>
+            </div>
+            <div class="social-icon">
+                <a href="https://www.linkedin.com/in/jalal-gahramanov/">
+                    <img src="l.png" alt="LinkedIn">
+                </a>
+                <p>LinkedIn</p>
+            </div>
+            <!-- Add more social icons as needed -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Gahramanov Industries</h2>
+        <p>
+            Gahramanov Industries, founded in 2023 by Jalal Gahramanov, is committed to innovation and excellence in
+            technology. We specialize in cutting-edge AI solutions and virtual assistants, as well as developing dynamic
+            webpages and applications. Our mission is to empower individuals and businesses with advanced technological
+            tools that enhance efficiency and productivity.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Gahramanov Industries. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
